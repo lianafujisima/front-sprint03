@@ -11,10 +11,10 @@ function App() {
       <Cabecalho/>
       <Menu/>
       <main className="flex-grow">
-        <Outlet/>
-        <WhatsappBotao/>
+      <Outlet/>
       </main>
       <Rodape/>
+      <WhatsappBotao/>
     </div>
   )
 }
