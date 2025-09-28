@@ -1,4 +1,5 @@
 import FotoLeticia from "../../assets/images/fotoleticia.jpeg";
+import FotoLiana from "../../assets/images/fotoliana.jpeg";
 
 
 export default function Integrantes(){
@@ -13,6 +14,15 @@ export default function Integrantes(){
                         <p>RM 565799</p>
                         <p>Linkedin: <a href="" className="text-blue-600 hover:underline">Letícia Santiago e Silva</a></p>
                         <p>Github: <a href="https://github.com/santiago-leticia" target="_blank">Leticia Santiago e Silva</a></p>
+                    </div>
+                </div>
+                <div>
+                    <img src={FotoLiana} alt="Foto Liana Fujisima"/>
+                    <div>
+                        <p>Liana Lyumi Morisita Fujisima</p>
+                        <p>RM 565698</p>
+                        <p>Linkedin: <a href="https://www.linkedin.com/in/liana-lyumi-morisita-fujisima-22368a367/" target="_blank">Liana Lyumi Morisita Fujisima</a></p>
+                        <p>Github: <a href="https://github.com/lianafujisima" target="_blank">Liana Lyumi Morisita Fujisima</a></p>
                     </div>
                 </div>
             </section>
