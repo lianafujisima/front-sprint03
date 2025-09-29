@@ -1,4 +1,4 @@
-export default function FaqContato(){
+export default function Faq(){
     return(
         <div>
 

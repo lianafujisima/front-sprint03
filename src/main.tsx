@@ -6,7 +6,8 @@ import App from './App.tsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './routes/Home/index.tsx'
 import Sobre from './routes/Sobre/index.tsx'
-import FaqContato from './routes/FaqContato/index.tsx'
+import Contato from './routes/Contato/index.tsx'
+import Faq from './routes/Faq/index.tsx'
 import Integrantes from './routes/Integrantes/index.tsx'
 import Whatsapp from './routes/Whatsapp/index.tsx'
 import NotificacaoWhatsapp from './routes/NotificacaoWhatsapp/index.tsx'
@@ -17,7 +18,8 @@ const router = createBrowserRouter([{
   children:[
     {path:"/", element:<Home/>,},
     {path:'/sobre', element:<Sobre/>},
-    {path:'/faqcontato', element:<FaqContato/>},
+    {path:'/contato', element:<Contato/>},
+    {path:'/faq', element:<Faq/>},
     {path:'/integrantes', element:<Integrantes/>},
     {path:"/whatsapp", element:<Whatsapp/>,},
     {path:"/notificacaowhatsapp", element:<NotificacaoWhatsapp/>,}
