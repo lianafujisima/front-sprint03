@@ -26,6 +26,19 @@ export default function Contato(){
                         <img src={Email} alt="Ícone Email" className="w-6 h-6"/>
                         <strong>E-mail - HCIMREA@HCIMREA.com.br</strong></p>
                 </section>
+                <section className="space-y-6">
+                    <h2 className="text-2xl font-bold text-gray-800 mb-4">Contatos Úteis de Emergência</h2>
+                    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                        <article className="bg-white rounded-xl shadow-md p-4 hover:shadow-lg transition">
+                            <h3 className="font-semibold text-gray-800">Polícia Militar</h3>
+                            <p className="text-gray-600 text-lg font-bold">190</p>
+                        </article>
+                        <article className="bg-white rounded-xl shadow-md p-4 hover:shadow-lg transition">
+                            <h3 className="font-semibold text-gray-800">Corpo de Bombeiros</h3>
+                            <p className="text-gray-600 text-lg font-bold">193</p>
+                        </article>
+                    </div>    
+                </section>
             </main>
         </div>
     )
