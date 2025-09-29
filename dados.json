@@ -15,6 +15,29 @@
       "data": "23-09-2025", 
       "hora": "12:00"
     }
+  ],
+  "faqs": [
+    {
+      "pergunta": "Posso fazer ligação de voz ao número do WhatsApp?",
+      "resposta": "Não. O número do WhatsApp é exclusivo para mensagens de texto. Use os telefones na seção Contatos se precisar falar por voz."
+    },
+    {
+      "pergunta": "Como posicionar a câmera para a video consulta?",
+      "resposta": "Posicione a câmera em local estável, na altura do rosto, com boa iluminação. Evite luz forte atrás de você."
+    },
+    {
+      "pergunta": "Como ajustar o áudio para a video consulta?",
+      "resposta": "Teste o microfone e alto-falantes antes da consulta. Use fones com microfone embutido para melhor qualidade."
+    },
+    {
+      "pergunta": "Preciso instalar algum aplicativo adicional para ter acesso ao WhatsApp do IMREA-HC?",
+      "resposta": "Não. Todo o processo é pelo WhatsApp. Apenas tenha o aplicativo atualizado instalado."
+    },
+    {
+      "pergunta": "Posso acessar meus exames em outro dispositivo?",
+      "resposta": "Sim. Use o mesmo número de WhatsApp cadastrado. Os resultados estarão disponíveis em qualquer dispositivo."
+    }
   ]
+  
 }
 

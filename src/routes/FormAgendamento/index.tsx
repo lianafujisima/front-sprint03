@@ -33,7 +33,7 @@ export default function FormAgendamento() {
   const handleSubmit = (e:React.FormEvent<HTMLFormElement>)=>{
     e.preventDefault()
     const agendamento = {...novo}
-    fetch(`http://localhost:5173/agendamento/${id ? id : ""}`,{
+    fetch(`http://localhost:5000/agendamento/${id ? id : ""}`,{
         method:metodo,
         headers:{"Content-Type":"Application/json"},
         body: JSON.stringify(agendamento)
@@ -44,7 +44,7 @@ export default function FormAgendamento() {
 
   useEffect(() => {
     if (id) {
-      fetch(`http://localhost:5173/agendamento/${id}`)
+      fetch(`http://localhost:5000/agendamento/${id}`)
         .then((resp) => resp.json())
         .then((data) => setNovo(data))
         .catch((error) => console.log(error));

@@ -14,14 +14,14 @@ export default function ListaAgendamento() {
   const [agendamento, setAgendamento] = useState<TypeAgendamento[]>([]);
 
   useEffect(() => {
-    fetch('http://localhost:5173/agendamento')
+    fetch('http://localhost:5000/agendamento')
         .then((resp) => resp.json())
         .then((resp) => setAgendamento(resp))
         .catch((error) => console.log(error));
 }, []); 
 
 const handleDelete = (id: number) => {
-    fetch(`http://localhost:5173/agendamento/${id}`, { method: "DELETE" })
+    fetch(`http://localhost:5000/agendamento/${id}`, { method: "DELETE" })
         .then(() => setAgendamento((prev) => prev.filter((p) => p.id !== id)))
         .catch((error) => console.log(error));
 };

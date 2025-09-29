@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Faq() {
     return (
       <main className="min-h-screen bg-gray-50 py-12 px-6">
@@ -42,6 +44,17 @@ export default function Faq() {
             </div>
           </div>
         </section>
+        <section className="max-w-4xl mx-auto mb-12 bg-white p-8 rounded-2xl shadow-md text-center">
+        <h2 className="text-2xl font-semibold text-gray-800 mb-4">Atendimento via WhatsApp</h2>
+        <p className="text-gray-700 mb-4">Para facilitar a comunicação com a equipe, o sistema permite que todas as dúvidas e solicitações sejam enviadas diretamente pelo WhatsApp.</p>
+        
+        <Link 
+          to="/faqwhatsapp" 
+          className="inline-block bg-green-500 text-white font-semibold px-6 py-3 rounded-xl shadow-lg hover:bg-green-600 transition"
+        >
+          Fale Conosco no WhatsApp
+        </Link>
+      </section>
       </main>
     );
   }

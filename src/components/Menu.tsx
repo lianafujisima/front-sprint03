@@ -8,8 +8,9 @@ export default function Menu(){
             <Link to={'/contato'} className='m-2'>Contato</Link>
             <Link to={'/faq'} className='m-2'>FAQ</Link>
             <Link to={'/integrantes'} className='m-2'>Integrantes</Link>
-            <Link to={'/agendamento'} className='m-2'>Whatsapp</Link>
-            <Link to={'/notificacaowhatsapp'} className='m-2'>Notificação Whatsapp</Link>
+            <Link to={'/agendamento'} className='m-2'>Simulação Whatsapp Agendamento</Link>
+            <Link to={'/faqwhatsapp'} className='m-2'>Simulação Whatsapp Faq</Link>
+            <Link to={'/notificacaowhatsapp'} className='m-2'>Simulação Notificação Whatsapp</Link>
         </nav>
     );
 }
