@@ -1,4 +1,6 @@
 import WhatsAppIcone from '../../assets/images/whatsapp.png';
+import Telefone from "../../assets/images/telefone.png";
+import Email from "../../assets/images/email.png";
 
 export default function Contato(){
     return(
@@ -10,6 +12,20 @@ export default function Contato(){
                 <img src={WhatsAppIcone} alt="WhatsApp" className="w-10 h-10"/>
                     Fale com a equipe no WhatsApp clicando no link ou pelo número: <strong>(99) 91111-1111</strong> </a>
             </section>
+
+            <section  className="mb-8 space-y-4">
+                    <p className="flex items-center gap-3 text-gray-700 font-medium"> 
+                        <img src={Telefone} alt="Ícone Telefone" className="w-6 h-6"/>
+                        Telefone direto para o Hospital das Clínicas: <strong>(99) 99999-9999</strong>
+                    </p>
+                    <p className="flex items-center gap-3 text-gray-700 font-medium"> 
+                        <img src={Telefone} alt="Ícone Telefone" className="w-6 h-6"/>
+                        Telefone direto para IMREA: <strong>(99) 98888-8888</strong>
+                    </p>
+                    <p className="flex items-center gap-3 text-gray-700 font-medium"> 
+                        <img src={Email} alt="Ícone Email" className="w-6 h-6"/>
+                        <strong>E-mail - HCIMREA@HCIMREA.com.br</strong></p>
+                </section>
             </main>
         </div>
     )
