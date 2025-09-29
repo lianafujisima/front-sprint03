@@ -9,7 +9,8 @@ import Sobre from './routes/Sobre/index.tsx'
 import Contato from './routes/Contato/index.tsx'
 import Faq from './routes/Faq/index.tsx'
 import Integrantes from './routes/Integrantes/index.tsx'
-import Whatsapp from './routes/Whatsapp/index.tsx'
+import FormAgendamento from './routes/FormAgendamento/index.tsx'
+import ListaAgendamento from './routes/ListaAgendamento/index.tsx'
 import NotificacaoWhatsapp from './routes/NotificacaoWhatsapp/index.tsx'
 
 const router = createBrowserRouter([{
@@ -21,8 +22,10 @@ const router = createBrowserRouter([{
     {path:'/contato', element:<Contato/>},
     {path:'/faq', element:<Faq/>},
     {path:'/integrantes', element:<Integrantes/>},
-    {path:"/whatsapp", element:<Whatsapp/>,},
-    {path:"/notificacaowhatsapp", element:<NotificacaoWhatsapp/>,}
+    {path:'/agendamento', element:<ListaAgendamento/>},
+    {path:'/incluir', element:<FormAgendamento/>},
+    {path:'/editar/:id', element:<FormAgendamento/>},
+    {path:"/notificacaowhatsapp", element:<NotificacaoWhatsapp/>}
   ]
 }])
 

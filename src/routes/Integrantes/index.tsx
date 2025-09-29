@@ -5,7 +5,7 @@ import FotoVictor from "../../assets/images/fotovictor.jpeg";
 export default function Integrantes(){
     return(
         <main className="min-h-screen bg-gray-50 py-12 px-6">
-            <h1 className="text-3xl font-bold text-center text-gray-800 mb-10">Integrantes</h1>
+            <h1 className="text-emerald-800 text-5xl text-center font-bold mb-8">Integrantes</h1>
             <section className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
                 <div  className="bg-white rounded-2xl shadow-md p-6 flex flex-col items-center hover:shadow-xl transition">
                     <img src={FotoLeticia} alt="Foto Leticia Santiago" className="w-32 h-32 rounded-full object-cover border-4 border-green-500 mb-4"/>
