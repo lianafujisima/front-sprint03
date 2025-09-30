@@ -1,10 +1,13 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function NotificacaoWhatsapp() {
   const [mensagens, setMensagens] = useState<string[]>([
     "Você recebeu uma nova notificação de agendamento!",
-    "Sua consulta está marcada para 2025-10-01 às 14:00",
+    "Sua consulta está marcada para: 01-11-2025 às 14:00",
   ]);
+
+  const navigate = useNavigate();
 
   const [notificacaoEnviada, setNotificacaoEnviada] = useState(true);
 
@@ -26,6 +29,7 @@ export default function NotificacaoWhatsapp() {
 
   return (
     <main className="flex flex-col items-center justify-center min-h-screen bg-green-50 p-4">
+      <h1 className="text-emerald-800 text-5xl text-center font-bold mb-14">Simulação de Notificação do WhatsApp</h1>
       <div className="w-full max-w-md bg-white rounded-lg shadow-lg flex flex-col h-[500px]">
         <div className="bg-green-600 text-white text-lg font-bold p-4 rounded-t-lg">
           Notificação de Consulta
@@ -36,16 +40,16 @@ export default function NotificacaoWhatsapp() {
             <div
               key={i}
               className={`flex ${
-                msg.startsWith("") || msg.startsWith("")
+                msg.startsWith("Você confirmou") || msg.startsWith("Você cancelou")
                   ? "justify-end"
                   : "justify-start"
               }`}
             >
               <div
                 className={`px-4 py-2 rounded-lg max-w-[75%] ${
-                  msg.startsWith("")
+                  msg.startsWith("Você confirmou")
                     ? "bg-green-500 text-white"
-                    : msg.startsWith("")
+                    : msg.startsWith("Você cancelou")
                     ? "bg-red-500 text-white"
                     : "bg-gray-200 text-gray-800"
                 }`}
@@ -73,6 +77,12 @@ export default function NotificacaoWhatsapp() {
           </div>
         )}
       </div>
+      <button
+        onClick={() => navigate("/")}
+        className="mt-6 bg-gray-300 px-4 py-2 rounded hover:bg-gray-400"
+      >
+        Voltar
+      </button>
     </main>
   );
 }

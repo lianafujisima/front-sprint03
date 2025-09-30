@@ -1,73 +1,142 @@
-# React + TypeScript + Vite
+# Integração Whatsapp
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+  O projeto visa integrar o whatsapp ao sistema do IMREA-HC, fazendo com que ações como realização de agendamento, consulta de agendamento, resultado de exames e dúvidas pode ser acessado de maneira simples através de uma conversa pelo whatsapp(feita por chatbot). E também um sistema automatizado de envio de notificação ao usuário lembrando da consulta para que ele confirme ou cancele para que diminuam as faltas em consultas. E tudo feito de maneira simples, como se fosse uma conversa no whatsapp.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Índice
 
-## React Compiler
+- [Sobre](#sobre)
+- [Funcionalidades](#funcionalidades)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Instalação](#instalação)
+- [Estrutura do Projeto](#estrutura-do-projeto)
+- [Imagens e Ícones](#imagens-e-ícones)
+- [Integrantes](#integrantes)
+- [Links](#links)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Sobre
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Ele resolve problemas como dificuldades de acesso ao site oficial, e ao contato pelo telefone, fazendo com que o funcionamento fique mais fluido e simples. Facilitando aqueles com maior dificuldade com tecnologia, como idosos, a utilizar com maior facilidade o sistema. E um novo sistema de notificação de confirmação/cancelamento de consultas visando diminuir as ausências.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Funcionalidades
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- Simula agendamento de consultas via WhatsApp
+- Simula consulta de agendamentos existentes
+- Simula recebimento de resultados de exames
+- Simula sistema automatizado de notificações para confirmar ou cancelar consultas
+- Atendimento a dúvidas frequentes por chatbot
+- Interface simples e amigável simulando uma conversa
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Tecnologias Utilizadas
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **Linguagens:** TypeScript, JavaScript, CSS  
+- **Frameworks/Bibliotecas:** React, Tailwind CSS, Hooks, Props, React Router  
+- **Ferramentas:** GitHub, Vite, VS Code, Node.js 
+
+---
+
+## Instalação
+
+Passo a passo para configurar o projeto localmente:
+
+```bash
+# Clonar o repositório
+git clone https://github.com/lianafujisima/front-sprint03
+
+# Entrar na pasta do projeto
+cd seu-projeto
+
+# Instalar dependências
+npm install # ou pip install -r requirements.txt
+
+# Rodar o projeto
+npm run backend
+
+# Em outro terminal
+npm run dev
+
+---
+
+## Estrutura do Projeto
+
+FRONT-SPRINT3
+┣ node_modules
+┣ public
+┣ src
+┃ ┣ assets
+┃ ┣ components
+┃ ┃ ┣ Cabecalho.tsx
+┃ ┃ ┣ Menu.tsx
+┃ ┃ ┣ Rodape.tsx
+┃ ┃ ┗ WhatsappBotao.tsx
+┃ ┣ routes
+┃ ┃ ┣ Contato
+┃ ┃ ┣ Faq
+┃ ┃ ┣ Home
+┃ ┃ ┣ Integrantes
+┃ ┃ ┣ Notificacao
+┃ ┃ ┣ Sobre
+┃ ┃ ┗ Whatsapp
+┃ ┣ App.css
+┃ ┣ App.tsx
+┃ ┣ index.css
+┃ ┗ main.tsx
+┣ vite-env.d.ts
+┣ .gitignore
+┣ dados.json
+┣ eslint.config.js
+┣ index.html
+┣ package.json
+┣ package-lock.json
+┣ README.md
+┣ tsconfig.json
+┣ tsconfig.app.json
+┣ tsconfig.node.json
+┗ vite.config.ts
+
+---
+
+## Imagens e Ícones
+
+- ![Ícone Agendamento](src/assets/images/agendamento.png)  
+- ![Ícone Consulta](src/assets/images/consulta.png)  
+- ![ícone Email](src/assets/images/email.png)
+- ![ícone Exames](src/assets/images/exames.png)  
+- ![Foto Letícia](src/assets/images/fotoleticia.jpeg)  
+- ![Foto Liana](src/assets/images/fotoliana.jpeg)
+- ![Foto Victor](src/assets/images/fotovictor.jpeg)  
+- ![IMREA](src/assets/images/IMREA.png)  
+- ![IMREA2](src/assets/images/IMREA2.png)
+- ![ícone Telefone](src/assets/images/telefone.png)  
+- ![Ícone WhatsApp](src/assets/images/whatsapp.png)  
+
+---
+
+## Integrantes
+
+- **Letícia Santiago e Silva RM565799** 
+  **Turma:1TDSPI**    
+  [GitHub](https://github.com/santiago-leticia)
+
+- **Liana Lyumi Morisita Fujisima RM565698** 
+  **Turma:1TDSPI**  
+  [GitHub](https://github.com/lianafujisima)
+
+- **Victor Willian Hwan Cho RM565382**
+  **Turma:1TDSPI**  
+  [GitHub](https://github.com/Victorcho05)
+
+---
+
+## Links
+
+Repositório GitHub: https://github.com/lianafujisima/front-sprint03
+
+Vídeo do YouTube: 

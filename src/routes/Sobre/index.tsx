@@ -52,7 +52,7 @@ export default function Sobre() {
         <p className="text-gray-700 mb-4">Para facilitar a comunicação com a equipe, o sistema permite que todas as dúvidas e solicitações sejam enviadas diretamente pelo WhatsApp.</p>
         
         <Link 
-          to="/agendamento" 
+          to="/whatsapp" 
           className="inline-block bg-green-500 text-white font-semibold px-6 py-3 rounded-xl shadow-lg hover:bg-green-600 transition"
         >
           Fale Conosco no WhatsApp
