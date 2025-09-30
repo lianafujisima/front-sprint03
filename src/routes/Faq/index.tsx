@@ -44,7 +44,7 @@ export default function Faq() {
             </div>
           </div>
         </section>
-        <section className="max-w-4xl mx-auto mb-12 bg-white p-8 rounded-2xl shadow-md text-center">
+        <section className="max-w-4xl mx-auto mb-12 bg-green-50 p-8 rounded-2xl shadow-md text-center">
         <h2 className="text-2xl font-semibold text-gray-800 mb-4">Atendimento via WhatsApp</h2>
         <p className="text-gray-700 mb-4">Para facilitar a comunicação com a equipe, o sistema permite que todas as dúvidas e solicitações sejam enviadas diretamente pelo WhatsApp.</p>
         

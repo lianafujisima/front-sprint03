@@ -25,17 +25,17 @@ export default function Sobre() {
       </section>
 
       <section className="max-w-4xl mx-auto mb-12 grid gap-6 sm:grid-cols-2">
-        <div className="bg-green-50 rounded-2xl p-6 shadow-md hover:shadow-lg transition flex flex-col items-center">
+        <div className="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition flex flex-col items-center">
           <img src={Agendamento} alt="Agendamento" className="w-24 h-24 mb-4" />
           <h2 className="font-semibold text-gray-800 mb-2 text-center">Agendamento de Consultas</h2>
           <p className="text-gray-700 text-center">Permite ao usuário escolher a data e horário disponíveis de forma rápida e prática.</p>
         </div>
-        <div className="bg-green-50 rounded-2xl p-6 shadow-md hover:shadow-lg transition flex flex-col items-center">
+        <div className="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition flex flex-col items-center">
           <img src={Consulta} alt="Consulta" className="w-24 h-24 mb-4" />
           <h2 className="font-semibold text-gray-800 mb-2 text-center">Consulta de Agendamentos</h2>
           <p className="text-gray-700 text-center">Visualize todos os agendamentos realizados, incluindo histórico de consultas.</p>
         </div>
-        <div className="bg-green-50 rounded-2xl p-6 shadow-md hover:shadow-lg transition flex flex-col items-center">
+        <div className="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition flex flex-col items-center">
           <img src={Exames} alt="Exames" className="w-24 h-24 mb-4" />
           <h2 className="font-semibold text-gray-800 mb-2 text-center">Resultados de Exames</h2>
           <p className="text-gray-700 text-center">Acesso direto aos resultados de exames realizados, com visualização rápida e segura.</p>
@@ -47,7 +47,7 @@ export default function Sobre() {
         </div>
       </section>
 
-      <section className="max-w-4xl mx-auto mb-12 bg-white p-8 rounded-2xl shadow-md text-center">
+      <section className="max-w-4xl mx-auto mb-12 bg-green-50 p-8 rounded-2xl shadow-md text-center">
         <h2 className="text-2xl font-semibold text-gray-800 mb-4">Atendimento via WhatsApp</h2>
         <p className="text-gray-700 mb-4">Para facilitar a comunicação com a equipe, o sistema permite que todas as dúvidas e solicitações sejam enviadas diretamente pelo WhatsApp.</p>
         

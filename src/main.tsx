@@ -11,10 +11,12 @@ import Faq from './routes/Faq/index.tsx'
 import Integrantes from './routes/Integrantes/index.tsx'
 import Whatsapp from './routes/Whatsapp/index.tsx'
 import NotificacaoWhatsapp from './routes/NotificacaoWhatsapp/index.tsx'
+import Error from './routes/Error/index.tsx'
 
 const router = createBrowserRouter([{
   path:'/',
   element:<App/>,
+  errorElement:<Error/>,
   children:[
     {path:"/", element:<Home/>,},
     {path:'/sobre', element:<Sobre/>},

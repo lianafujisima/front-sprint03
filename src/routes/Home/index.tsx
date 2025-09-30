@@ -43,7 +43,7 @@ export default function Home() {
             <p className="text-gray-600 text-center">Visualize os resultados de seus exames de forma online.</p>
           </div>
 
-          <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition flex flex-col items-center">
+          <div className="bg-green-50 p-6 rounded-2xl shadow-md hover:shadow-lg transition flex flex-col items-center">
             <Link to="/whatsapp">
             <img src={WhatsApp} alt="WhatsApp" className="w-20 h-20 mb-4 rounded-full shadow-lg hover:bg-green-600 transition" />
             </Link>
