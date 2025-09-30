@@ -2,23 +2,28 @@ import { Link } from "react-router-dom";
 import WhatsAppIcone from '../../assets/images/whatsapp.png';
 import Telefone from "../../assets/images/telefone.png";
 import Email from "../../assets/images/email.png";
+import Imrea2 from "../../assets/images/IMREA2.jpg";
+
 
 export default function Contato(){
     return(
         <div>
             <main className="min-h-screen bg-gray-50 py-12 px-6">
-            <h1  className="text-emerald-800 text-5xl text-center font-bold mb-8">CONTATO</h1>
-            <section className="mb-8">
-                <p className="text-gray-700 mb-4">Fale com a equipe no WhatsApp clicando no link ou pelo número: <strong>(99) 91111-1111</strong> </p>
-                <Link 
-                to="/whatsapp" 
-                className="inline-block bg-green-500 text-white font-semibold px-6 py-3 rounded-xl shadow-lg hover:bg-green-600 transition"
-                >
-                <img src={WhatsAppIcone} alt="WhatsApp" className="w-15 h-15 bg-center"/>
-                </Link>
-            </section>
+                <h1 className="text-emerald-800 text-5xl text-center font-bold mb-8">CONTATO</h1>
+                <section className="max-w-5xl mx-auto mb-12">
+                    <img src={Imrea2}alt="Banner do Sistema" className="w-full object-contain rounded-2xl shadow-md"/>
+                </section>
+                <section className="mb-8">
+                    <h2 className="text-gray-700 mb-4 text-2xl">Fale com a equipe no WhatsApp clicando no link ou pelo número: <strong>(99) 91111-1111</strong> </h2>
+                    <Link 
+                    to="/whatsapp" 
+                    className=" flex justify-center bg-green-500 text-white font-semibold px-6 py-3 rounded-xl shadow-lg hover:bg-green-600 transition "
+                    >
+                    <img src={WhatsAppIcone} alt="WhatsApp" className="w-15 h-15 bg-center"/>
+                    </Link>
+                </section>
 
-            <section  className="mb-8 space-y-4">
+                <section  className="mb-8 space-y-4">
                     <p className="flex items-center gap-3 text-gray-700 font-medium"> 
                         <img src={Telefone} alt="Ícone Telefone" className="w-6 h-6"/>
                         Telefone Hospital das Clínicas para ligação: <strong>(99) 99999-9999</strong>

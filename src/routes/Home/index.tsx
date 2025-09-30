@@ -9,19 +9,19 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-gray-50 py-12 px-6">
 
-        <section className="max-w-4xl mx-auto mb-12 text-center">
-          <h1 className="text-emerald-800 text-5xl text-center font-bold mb-8">Bem-vindo ao site oficial do Hospital das Clínicas com IMREA!</h1>
-          <p className="text-gray-700 leading-relaxed">
-            Aqui você pode realizar agendamentos, consultar seus exames e tirar dúvidas tanto pelo site Oficial como diretamente pelo WhatsApp.
-          </p>
-        </section>
-
         <section className="mb-12">
           <img
             src={Imrea}
             alt="Banner Hospital das Clínicas com IMREA"
             className="w-full h-110 rounded-2xl shadow-md"
           />
+        </section>
+
+        <section className="max-w-4xl mx-auto mb-12 text-center">
+          <h1 className="text-emerald-800 text-5xl text-center font-bold mb-8">Bem-vindo ao site oficial do Hospital das Clínicas com IMREA!</h1>
+          <p className="text-gray-700 leading-relaxed">
+            Aqui você pode realizar agendamentos, consultar seus exames e tirar dúvidas tanto pelo site Oficial como diretamente pelo WhatsApp.
+          </p>
         </section>
 
         <section className="max-w-5xl mx-auto grid gap-6 sm:grid-cols-2 lg:grid-cols-4">

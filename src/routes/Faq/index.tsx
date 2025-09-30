@@ -1,10 +1,14 @@
 import { Link } from "react-router-dom";
+import Imrea2 from "../../assets/images/IMREA2.jpg";
 
 export default function Faq() {
     return (
       <main className="min-h-screen bg-gray-50 py-12 px-6">
         <section className="max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-md">
           <h1 className="text-emerald-800 text-5xl text-center font-bold mb-8">Perguntas Frequentes (FAQ)</h1>
+          <div className="max-w-5xl mx-auto mb-12">
+            <img src={Imrea2}alt="Banner do Sistema" className="w-full object-contain rounded-2xl shadow-md"/>
+          </div>
           <div className="space-y-6">
             <div>
               <h2 className="text-xl font-semibold text-gray-800">Posso fazer ligação de voz ao número do WhatsApp?</h2>
