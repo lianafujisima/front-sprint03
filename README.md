@@ -123,20 +123,25 @@ FRONT-SPRINT3
 
 - **Letícia Santiago e Silva RM565799** 
   **Turma:1TDSPI**    
+
   [GitHub](https://github.com/santiago-leticia)
 
 - **Liana Lyumi Morisita Fujisima RM565698** 
   **Turma:1TDSPI**  
+
   [GitHub](https://github.com/lianafujisima)
 
 - **Victor Willian Hwan Cho RM565382**
   **Turma:1TDSPI**  
+  
   [GitHub](https://github.com/Victorcho05)
 
 ---
 
 ## Links
 
-Repositório GitHub: https://github.com/lianafujisima/front-sprint03
+## Repositório
 
-Vídeo do YouTube: https://www.youtube.com/watch?v=pVBxztkzG3E 
+- [Repositório GitHub](https://github.com/lianafujisima/front-sprint03)
+- [Vídeo no YouTube](https://www.youtube.com/watch?v=pVBxztkzG3E)
+
