@@ -133,14 +133,12 @@ FRONT-SPRINT3
 
 - **Victor Willian Hwan Cho RM565382**
   **Turma:1TDSPI**  
-  
+
   [GitHub](https://github.com/Victorcho05)
 
 ---
 
 ## Links
-
-## Repositório
 
 - [Repositório GitHub](https://github.com/lianafujisima/front-sprint03)
 - [Vídeo no YouTube](https://www.youtube.com/watch?v=pVBxztkzG3E)
