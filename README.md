@@ -139,4 +139,4 @@ FRONT-SPRINT3
 
 Repositório GitHub: https://github.com/lianafujisima/front-sprint03
 
-Vídeo do YouTube: 
+Vídeo do YouTube: https://www.youtube.com/watch?v=pVBxztkzG3E 

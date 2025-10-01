@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 export default function Home() {
   return (
     <main className="min-h-screen bg-gray-50 py-12 px-6">
-
+      <h1 className="text-emerald-800 text-5xl text-center font-bold mb-8">Bem-vindo ao site oficial do Hospital das Clínicas com IMREA!</h1>
         <section className="mb-12">
           <img
             src={Imrea}
@@ -18,8 +18,8 @@ export default function Home() {
         </section>
 
         <section className="max-w-4xl mx-auto mb-12 text-center">
-          <h1 className="text-emerald-800 text-5xl text-center font-bold mb-8">Bem-vindo ao site oficial do Hospital das Clínicas com IMREA!</h1>
-          <p className="text-gray-700 leading-relaxed">
+          
+          <p className="text-gray-700 leading-relaxed font-bold text-2xl">
             Aqui você pode realizar agendamentos, consultar seus exames e tirar dúvidas tanto pelo site Oficial como diretamente pelo WhatsApp.
           </p>
         </section>
