@@ -1,7 +1,7 @@
 import { useState } from "react"
-import React from "react" // Necessário para React.ChangeEvent
+import React from "react" 
  
-// Define o tipo Paciente com base nas colunas da T_WTS_PACIENTE
+
 type Paciente = {
   // Campos obrigatórios (NOT NULL)
   nm_paciente: string

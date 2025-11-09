@@ -13,7 +13,7 @@ import Integrantes from './routes/Integrantes/index.tsx'
 import Whatsapp from './routes/Whatsapp/index.tsx'
 import NotificacaoWhatsapp from './routes/NotificacaoWhatsapp/index.tsx'
 import Error from './routes/Error/index.tsx'
-import CriarContaPage from './routes/CriarConta/index.tsx' // A página contêiner do cadastro
+import CriarContaPage from './routes/CriarContaPage/index.tsx' // A página contêiner do cadastro
  
 // 1. Definição do Objeto de Roteamento
 const router = createBrowserRouter([{

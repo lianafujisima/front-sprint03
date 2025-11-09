@@ -1,12 +1,8 @@
 
- 
-// src/components/cadastro/CadastroPacienteAutentica.tsx
- 
 import { useState } from "react";
 import React from "react";
 import type { PacienteAutentica } from "../../types/PacienteAutentica";
- 
-// O componente agora recebe a função onChange para notificar o componente pai
+
 export default function CadastroPacienteAutentica({
     onChange
 }: {
