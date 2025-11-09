@@ -2,7 +2,7 @@
  
 import React, { useState } from 'react';
 import CadastroPaciente from "../../components/cadastro/CadastroPaciente";
-import type { Paciente } from "../../types/Paciente"; 
+import type { Paciente } from "../../types/Paciente"; // ✅ Importando o tipo
  
 export default function CriarContaPage(){
    
@@ -21,6 +21,7 @@ export default function CriarContaPage(){
         if (dadosPaciente && dadosPaciente.nm_paciente) {
             console.log("Submetendo dados FINAIS:", dadosPaciente);
             alert(`Pronto para enviar ao backend: ${dadosPaciente.nm_paciente}`);
+            // 🛑 LÓGICA DE ENVIO À API/BACKEND VIRIA AQUI
         } else {
             alert("Preencha o nome do paciente para submeter.");
         }
@@ -50,3 +51,4 @@ export default function CriarContaPage(){
         </main>
     );
 }
+ 
