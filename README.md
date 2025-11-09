@@ -25,6 +25,7 @@ Ele resolve problemas como dificuldades de acesso ao site oficial, e ao contato 
 
 ## Funcionalidades
 
+- Simula um cadastro de paciente
 - Simula agendamento de consultas via WhatsApp
 - Simula consulta de agendamentos existentes
 - Simula recebimento de resultados de exames
@@ -141,5 +142,5 @@ FRONT-SPRINT3
 ## Links
 
 - [Repositório GitHub](https://github.com/lianafujisima/front-sprint03)
-- [Vídeo no YouTube](https://www.youtube.com/watch?v=pVBxztkzG3E)
+- [Vídeo no YouTube]()
 
