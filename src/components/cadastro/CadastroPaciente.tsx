@@ -14,13 +14,11 @@ type Paciente = {
   ds_escolaridade: string
   ds_estado_civil: string
   tip_grupo_sanguineo: string
-  nr_altura: string // Usando string para flexibilidade no input (ex: "1.75")
-  nr_peso: string // Usando string para flexibilidade no input (ex: "75.5")
+  nr_altura: string 
+  nr_peso: string 
  
-  // O id_autentica seria gerenciado internamente pelo backend ou num formulário de login separado
 }
  
-// O componente recebe a função onChange para notificar o componente pai
 export default function CadastroPaciente({ onChange }: { onChange: (data: Paciente) => void }) {
   const [paciente, setPaciente] = useState<Paciente>({
     nm_paciente: "",
