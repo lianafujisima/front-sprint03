@@ -1,5 +1,4 @@
-// src/routes/CriarContaPage/index.tsx (Atualizado)
- 
+
 import React, { useState } from 'react';
 import CadastroPaciente from "../../components/cadastro/CadastroPaciente";
 import CadastroPacienteAutentica from "../../components/cadastro/CadastroPacienteAutentica"; // NOVO IMPORT
@@ -8,43 +7,33 @@ import type{ PacienteAutentica } from "../../types/PacienteAutentica"; // NOVO I
  
 export default function CriarContaPage(){
    
-    // Estado para os Dados Pessoais
     const [dadosPaciente, setDadosPaciente] = useState<Paciente | null>(null);
-    // Estado para os Dados de Autenticação
     const [dadosAutentica, setDadosAutentica] = useState<PacienteAutentica | null>(null); // NOVO ESTADO
  
-    // Funções de manipulação de estado
     const handleDadosChange = (data: Paciente) => setDadosPaciente(data);
     const handleAutenticaChange = (data: PacienteAutentica) => setDadosAutentica(data); // NOVA FUNÇÃO
  
-    // Função de Submissão (incluindo validação de senha)
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
        
-        // Validação de Dados Pessoais (nm_paciente é o mínimo)
         if (!dadosPaciente || dadosPaciente.nm_paciente === '') {
              return alert("Por favor, preencha o nome do paciente.");
         }
        
-        // Validação de Senha
         if (!dadosAutentica || dadosAutentica.senha !== dadosAutentica.confirmarSenha || dadosAutentica.senha === '') {
              return alert("Verifique o login e a confirmação de senha!");
         }
  
-        // Se tudo estiver OK, prepara o objeto final para o backend
         const dadosCompletos = {
             ...dadosPaciente,
             login: dadosAutentica.login,
             senha: dadosAutentica.senha,
-            // Não envia a 'confirmarSenha' para o backend
         };
        
         console.log("Dados FINAIS UNIFICADOS para envio:", dadosCompletos);
         alert(`Dados prontos para envio. Paciente: ${dadosCompletos.nm_paciente}, Login: ${dadosCompletos.login}`);
-        // 🛑 LÓGICA DE ENVIO À API/BACKEND VIRIA AQUI
     };
    
-    // Lógica para desabilitar o botão de forma mais robusta
     const isButtonDisabled =
         !dadosPaciente ||
         dadosPaciente.nm_paciente === '' ||
@@ -68,7 +57,7 @@ export default function CriarContaPage(){
                     <button
                         type="submit"
                         className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg transition duration-200"
-                        disabled={isButtonDisabled} // Usa a lógica robusta
+                        disabled={isButtonDisabled}
                     >
                         Cadastrar e Criar Acesso
                     </button>
