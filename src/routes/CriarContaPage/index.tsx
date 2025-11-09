@@ -1,45 +1,98 @@
 
 import React, { useState } from 'react';
-import CadastroPaciente from "../../components/cadastro/CadastroPaciente";
-import CadastroPacienteAutentica from "../../components/cadastro/CadastroPacienteAutentica"; // NOVO IMPORT
-import type{ Paciente } from "../../types/Paciente";
-import type{ PacienteAutentica } from "../../types/PacienteAutentica"; // NOVO IMPORT
+import { useNavigate } from 'react-router-dom';
+import CadastroPacienteCompleto from "../../components/cadastro/CadastroPacienteCompleto";
+import type { UsuarioCadastro } from "../../types/UsuarioCadastro";
+ 
+const INITIAL_CADASTRO: UsuarioCadastro = {
+    nome_usuario: '',
+    cpf: '',
+    telefone: '',
+    email_usuario: '',
+    senha_usuario: '',
+};
  
 export default function CriarContaPage(){
    
-    const [dadosPaciente, setDadosPaciente] = useState<Paciente | null>(null);
-    const [dadosAutentica, setDadosAutentica] = useState<PacienteAutentica | null>(null); // NOVO ESTADO
+    const navigate = useNavigate();
+   
+    const [dadosCadastro, setDadosCadastro] = useState<UsuarioCadastro>(INITIAL_CADASTRO);
+    const [confirmarSenha, setConfirmarSenha] = useState('');
+    const [isLoading, setIsLoading] = useState(false);
  
-    const handleDadosChange = (data: Paciente) => setDadosPaciente(data);
-    const handleAutenticaChange = (data: PacienteAutentica) => setDadosAutentica(data); // NOVA FUNÇÃO
- 
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-       
-        if (!dadosPaciente || dadosPaciente.nm_paciente === '') {
-             return alert("Por favor, preencha o nome do paciente.");
-        }
-       
-        if (!dadosAutentica || dadosAutentica.senha !== dadosAutentica.confirmarSenha || dadosAutentica.senha === '') {
-             return alert("Verifique o login e a confirmação de senha!");
-        }
- 
-        const dadosCompletos = {
-            ...dadosPaciente,
-            login: dadosAutentica.login,
-            senha: dadosAutentica.senha,
-        };
-       
-        console.log("Dados FINAIS UNIFICADOS para envio:", dadosCompletos);
-        alert(`Dados prontos para envio. Paciente: ${dadosCompletos.nm_paciente}, Login: ${dadosCompletos.login}`);
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const { name, value } = e.target;
+        setDadosCadastro(prev => ({
+            ...prev,
+            [name as keyof UsuarioCadastro]: value,
+        }));
     };
    
-    const isButtonDisabled =
-        !dadosPaciente ||
-        dadosPaciente.nm_paciente === '' ||
-        !dadosAutentica ||
-        dadosAutentica.senha === '' ||
-        dadosAutentica.senha !== dadosAutentica.confirmarSenha;
+    const handleConfirmSenhaChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setConfirmarSenha(e.target.value);
+    };
+   
+    const isFormValid =
+        dadosCadastro.nome_usuario.length > 0 &&
+        dadosCadastro.email_usuario.length > 0 &&
+        dadosCadastro.senha_usuario.length >= 6 && 
+        dadosCadastro.senha_usuario === confirmarSenha;
+
+ 
+    const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+   
+    if (!isFormValid || isLoading) {
+         return;
+    }
+ 
+    const dadosCompletos: UsuarioCadastro = {
+        nome_usuario: dadosCadastro.nome_usuario,
+        cpf: dadosCadastro.cpf,
+        telefone: dadosCadastro.telefone,
+        email_usuario: dadosCadastro.email_usuario,
+        senha_usuario: dadosCadastro.senha_usuario,
+    };
+   
+    setIsLoading(true); 
+    try {
+        const API_ENDPOINT = 'https://java-challenge-sp4.onrender.com/doctorAjuda/cadastrar/paciente';
+ 
+        const response = await fetch(API_ENDPOINT, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(dadosCompletos),
+        });
+ 
+        if (response.status === 201) { 
+            alert("Paciente cadastrado com sucesso! Redirecionando...");
+            navigate('/');
+        } else {
+            let errorMessage = 'Ocorreu um erro desconhecido.';
+            try {
+                const errorData = await response.json();
+               
+                if (errorData && errorData.erro) {
+                    errorMessage = errorData.erro;
+                } else if (errorData && errorData.message) {
+                    errorMessage = errorData.message;
+                }
+            } catch (e) {
+                errorMessage = response.statusText || `Erro no servidor (Status: ${response.status})`;
+            }
+           
+            alert(`Falha no cadastro (Status ${response.status}): ${errorMessage}`);
+        }
+ 
+    } catch (error) {
+        console.error("Erro na comunicação com a API:", error);
+        alert("⚠️ Erro de rede. Verifique sua conexão e tente novamente.");
+    } finally {
+        setIsLoading(false);
+    }
+};
  
     return(
         <main className="container mx-auto p-4">
@@ -47,23 +100,24 @@ export default function CriarContaPage(){
  
             <form onSubmit={handleSubmit}>
                
-                {/* Componente de Dados Pessoais */}
-                <CadastroPaciente onChange={handleDadosChange}/>
- 
-                {/* Componente de Autenticação */}
-                <CadastroPacienteAutentica onChange={handleAutenticaChange}/> {/* NOVO COMPONENTE */}
+                {/*Usando o novo componente unificado */}
+                <CadastroPacienteCompleto
+                    dados={dadosCadastro}
+                    onChange={handleChange}
+                    onConfirmSenhaChange={handleConfirmSenhaChange}
+                    confirmarSenha={confirmarSenha}
+                />
  
                 <div className="flex justify-center mt-6">
                     <button
                         type="submit"
-                        className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg transition duration-200"
-                        disabled={isButtonDisabled}
+                        className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg transition duration-200 disabled:opacity-50"
+                        disabled={!isFormValid || isLoading}
                     >
-                        Cadastrar e Criar Acesso
+                        {isLoading ? 'Enviando...' : 'Cadastrar e Criar Acesso'}
                     </button>
                 </div>
             </form>
-           
         </main>
     );
 }
