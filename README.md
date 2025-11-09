@@ -73,18 +73,23 @@ FRONT-SPRINT3
 ┣ src
 ┃ ┣ assets
 ┃ ┣ components
+┃ ┃ ┣ cadastro
+┃ ┃   ┣ CadatroPacienteCompleto.tsx  
 ┃ ┃ ┣ Cabecalho.tsx
 ┃ ┃ ┣ Menu.tsx
 ┃ ┃ ┣ Rodape.tsx
 ┃ ┃ ┗ WhatsappBotao.tsx
 ┃ ┣ routes
 ┃ ┃ ┣ Contato
+┃ ┃ ┣ CriarContaPage
 ┃ ┃ ┣ Faq
 ┃ ┃ ┣ Home
 ┃ ┃ ┣ Integrantes
 ┃ ┃ ┣ Notificacao
 ┃ ┃ ┣ Sobre
 ┃ ┃ ┗ Whatsapp
+┃ ┣ types
+┃ ┃ ┣ UsuarioCadastro.ts
 ┃ ┣ App.css
 ┃ ┣ App.tsx
 ┃ ┣ index.css
